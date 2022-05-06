@@ -1,0 +1,81 @@
+<html>
+    <head>
+        {{>navbar/head}}
+        <style> 
+        input[type=text] {
+            width: 100%;
+            padding: 12px 20px;
+            margin: 8px 0;
+            box-sizing: border-box;
+            border: none;
+            background: none;
+        }
+        </style>
+    </head>
+    <body>
+        {{>navbar/navStaff}}
+        <section class="page-section cta">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-9 mx-auto">
+                        <div class="cta-inner bg-faded text-center rounded">
+                            <h2 class="section-heading mb-5">
+                                <span class="section-heading-upper">Add New Menu Item</span>
+                                <span class="section-heading-lower"></span>
+                            </h2>
+                            <form method="POST" action="/new">
+                                <div class="form-group">
+                                    <ul class="list-unstyled list-hours mb-5 text-left mx-auto">
+                                        <li class="list-unstyled-item list-hours-item d-flex">
+                                            <input type="text" id="id" name="id" placeholder="id">
+                                            <span class="ms-auto">
+                                            <input  type="text" id="available" name="available"placeholder="available">
+                                            </span>
+                                        </li>
+                                        <li class="list-unstyled-item list-hours-item d-flex">
+                                            <input type="text" id="product" name="product" placeholder="product">
+                                            <span class="ms-auto">
+                                            <input  type="text" id="dishType" name="dishType"placeholder="dish type">
+                                            </span>
+                                        </li>
+                                         <li class="list-unstyled-item list-hours-item d-flex">
+                                            <input type="text" id="name" name="name" placeholder="name">
+                                            <span class="ms-auto">
+                                            <input  type="text" id="price" name="price"placeholder="price">
+                                            </span>
+                                        </li>
+                                         <li class="list-unstyled-item list-hours-item d-flex">
+                                            <input type="text" id="description" name="description" placeholder="description">
+                                            <span class="ms-auto">
+                                            <input  type="text" id="allergen" name="allergen"placeholder="allergen">
+                                            </span>
+                                        </li>
+                                         <li class="list-unstyled-item list-hours-item d-flex">
+                                            <input type="text" id="lunch" name="lunch" placeholder="lunch">
+                                            <span class="ms-auto">
+                                            <input  type="text" id="dinner" name="dinner"placeholder="dinner">
+                                            </span>
+                                        </li>
+                                    </ul>   
+                                    <input type="submit" value="Submit" class="btn btn-primary">
+                                </div>
+                            </form>
+                            <h2 class="section-heading mb-5">
+                                <span class="section-heading-upper">Id's already taken</span>
+                            </h2>
+                            <ul class="list-unstyled list-hours mb-5 text-left mx-auto">
+                                {{#entries}}
+                                <li class="list-unstyled-item list-hours-item d-flex">
+                                    {{id}}
+                                    <span class="ms-auto">{{dishType}}</span>
+                                </li>
+                                {{/entries}}                    
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        {{>navbar/footer}}
+    </body>
+</html>

@@ -1,0 +1,64 @@
+<html>
+<head>
+    {{>navbar/head}}
+</head>
+    <body>
+        {{>navbar/nav}}
+        <section class="page-section">
+            <div class="container">
+                <div class="product-item">
+                    <div class="product-item-title d-flex">
+                        <div class="bg-faded p-5 d-flex ms-auto rounded">
+                            <h2 class="section-heading mb-0">
+                                <span class="section-heading-upper">Menu Available Now</span>
+                                <span class="section-heading-lower">Enjoy Our Delicious Dinner Menu</span>
+                            </h2>
+                        </div>
+                    </div>
+                    <img class="product-item-img mx-auto d-flex rounded img-fluid mb-3 mb-lg-0" src="./img/products-01.jpg" alt="..." />
+                </div>
+            </div>
+        </section>
+        <section class="page-section cta">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-9 mx-auto">
+                        <div class="cta-inner bg-faded text-center rounded">
+                            <h2 class="section-heading mb-5">
+                                <span class="section-heading-upper">Enjoy Our Delicious Dinner Menu</span>
+                                <span class="section-heading-lower">2 Course Meal For Only £15.99</span>
+                            </h2>
+                            <ul class="list-unstyled list-hours mb-5 text-left mx-auto">
+                                <li class="list-unstyled-item list-hours-item d-flex">
+                                    
+                                    <span class="ms-auto"></span>
+                                </li>
+                                {{#entries}}
+                                <li class="list-unstyled-item list-hours-item d-flex">
+                                    {{name}}
+                                    <span class="ms-auto">
+                                    <a href="/posts/{{name}}">i</a></span>
+                                </li>
+                                {{/entries}}                    
+                            </ul>                           
+                            <p class="address mb-5">
+                                <em>
+                                    <strong>1116 Argyle Street</strong>
+                                    <br />
+                                    Scotland, Glasgow
+                                </em>
+                            </p>
+                            <p class="mb-0">
+                                <small><em>Call Anytime</em></small>
+                                <br />
+                                (44) 0141-585-8468
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    {{>menu/menutail}}
+    {{>navbar/footer}}
+    </body>
+</html>

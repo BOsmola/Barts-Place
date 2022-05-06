@@ -1,0 +1,59 @@
+<html>
+<head>
+    {{>navbar/head}}
+</head>
+    <body>
+        {{>navbar/nav}}
+        <section class="page-section cta">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-9 mx-auto">
+                    <ul class="list-unstyled list-hours mb-5 text-left mx-auto">
+                    <li class="list-unstyled-item list-hours-item d-flex">
+                    <div class="intro-button mx-auto"><a class="btn btn-primary btn-xl" href="/glutenFree">Gluten Free</a></div>
+                    <span class="ms-auto">
+                    <div class="intro-button mx-auto"><a class="btn btn-primary btn-xl" href="/vegetarian">Vegetarian</a></div>
+                    </span>
+                    <span class="ms-auto">
+                    <div class="intro-button mx-auto"><a class="btn btn-primary btn-xl" href="/spicy">Spicy</a></div>
+                    </span>
+                    </li>
+                    </ul>
+                        <div class="cta-inner bg-faded text-center rounded">
+                            <h2 class="section-heading mb-5">
+                                <span class="section-heading-upper">Enjoy</span>
+                                <span class="section-heading-lower">Menu</span>
+                            </h2>
+                            <ul class="list-unstyled list-hours mb-5 text-left mx-auto">
+                                {{#entries}}
+                                <li class="list-unstyled-item list-hours-item d-flex">
+                                    {{name}}
+                                    <span class="ms-auto">
+                                    <a href="/posts/{{name}}">
+                                    {{price}}
+                                    </a>
+                                    </span>
+                                </li>
+                                {{/entries}}                    
+                            </ul>
+                            <p class="address mb-5">
+                                <em>
+                                    <strong>1116 Argyle Street</strong>
+                                    <br />
+                                    Scotland, Glasgow
+                                </em>
+                            </p>
+                            <p class="mb-0">
+                                <small><em>Call Anytime</em></small>
+                                <br />
+                                (44) 0141-585-8468
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    {{>navbar/footer}}
+    </body>
+</html>
+        

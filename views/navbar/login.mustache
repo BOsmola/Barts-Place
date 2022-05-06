@@ -1,0 +1,54 @@
+<html>
+<head>
+    {{>navbar/head}}
+    <style> 
+    input[type=text] {
+        width: 100%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        box-sizing: border-box;
+        border: none;
+        background: none;
+    }
+    input[type=password] {
+        width: 100%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        box-sizing: border-box;
+        border: none;
+        background: none;
+    }
+    </style>
+</head>
+    <body>
+        {{>navbar/nav}}
+        <section class="page-section cta">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-9 mx-auto">
+                        <div class="cta-inner bg-faded text-center rounded">
+                            <h2 class="section-heading mb-5">
+                                <span class="section-heading-upper">Login</span>
+                                <span class="section-heading-lower"></span>
+                            </h2>
+                            <form method="POST" action="/login">
+                                <div class="form-group">
+                                    <ul class="list-unstyled list-hours mb-5 text-left mx-auto">
+                                        <li class="list-unstyled-item list-hours-item d-flex">
+                                            <input type="text" id="username" name="username" placeholder="Username">
+                                            <span class="ms-auto">
+                                            <input  type="password" id="password" name="password"placeholder="Password">
+                                            </span>
+                                        </li>
+                                    </ul>   
+                                    <input type="submit" value="Sign In" class="btn btn-primary">
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        {{>navbar/footer}}
+    </body>
+</html>

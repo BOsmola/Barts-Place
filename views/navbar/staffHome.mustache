@@ -1,0 +1,35 @@
+<html>
+<head>
+    {{>navbar/head}}
+</head>
+    <body>
+        {{>navbar/navStaff}}
+        <section class="page-section cta">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-9 mx-auto">
+                        <div class="cta-inner bg-faded text-center rounded">
+                            <form method="POST" action="/menuChoice">
+                                <h2 class="section-heading mb-5">
+                                    <span class="section-heading-upper">Available <Menu></Menu></span>
+                                    <span class="section-heading-lower"></span>
+                                </h2>
+                                <input type="radio" id="aLaCard" name="menu" value="1">
+                                    <label for="aLaCard"> A La Cart</label>
+                                <input type="radio" id="lunch" name="menu" value="13">
+                                    <label for="lunch"> Lunch</label>
+                                <input type="radio" id="dinner" name="menu" value="19">
+                                    <label for="dinner"> Dinner</label>
+                                <input type="radio" id="reset" name="menu" value="date.getHours()">
+                                    <label for="reset"> Reset</label>
+                                    <br><br><br>
+                                <input type="submit" value="Submit" class="btn btn-primary">
+                            </form> 
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+         {{>navbar/footer}}
+    </body>
+</html>
