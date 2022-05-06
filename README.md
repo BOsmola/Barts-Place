@@ -5,6 +5,11 @@ https://barts-place.herokuapp.com/
 For demonstration purpous username and password is: "admin"
 password is bcrypt using 12 rounds
 
+In order to check out this code or use this application you need to download it from remote repository.
+To do so use 'git clone https://github.com/BOsmola/Barts-Place.git' command in your git terminal, follow by 'cd' to change to root directory. 
+Then to instal needed dependancies use 'npm install', lastly you need to create '.env' file on your root directory with
+'ACCESS_TOKEN_SECRET="Bart's Restaurant Web Token"' in it. When you ready to run application use 'node index.js'.
+
 Application welcome you with home page of the restaurant with some general information about it
 openning hours, localization, telephone number (all of them fictitious). From here, using the link,
 you can go to embedded Google map link with localization of the restaurant. There is navbar on top of the screen
